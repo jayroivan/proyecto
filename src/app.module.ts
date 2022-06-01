@@ -7,8 +7,8 @@ import { EstudiantesService } from './estudiantes/estudiantes.service';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [EstudiantesModule,MongooseModule.forRoot("")], //colocar la url de la base de datos en mongo enlinea
-  controllers: [AppController, EstudiantesController],
-  providers: [AppService, EstudiantesService],
+  imports: [EstudiantesModule,MongooseModule.forRoot("mongodb://localhost:27017/registros")], //colocar la url de la base de datos en mongo enlinea
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

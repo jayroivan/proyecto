@@ -24,8 +24,9 @@ export class EstudiantesService {
         return await nuevo.save();
       }
 
-      async update(id:string, estudiante:Estudiantes):Promise<Estudiantes>
+      async update(id,estudiante:Estudiantes):Promise<Estudiantes>
       {
+        console.log(id);
         return await this.estudianteModel.findByIdAndUpdate(id,estudiante,{new:true});
       }
 
